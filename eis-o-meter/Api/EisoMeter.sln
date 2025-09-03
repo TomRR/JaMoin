@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EisoMeter.Api", "src\EisoMeter.Api\EisoMeter.Api.csproj", "{AFBC612B-3CDD-4E94-B3B8-8B02599BDBB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EisoMeter.Api.Tests", "tests\EisoMeter.Api.Tests\EisoMeter.Api.Tests.csproj", "{A4E069B8-103D-4C82-92CA-21B62E85DBE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFBC612B-3CDD-4E94-B3B8-8B02599BDBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBC612B-3CDD-4E94-B3B8-8B02599BDBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBC612B-3CDD-4E94-B3B8-8B02599BDBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBC612B-3CDD-4E94-B3B8-8B02599BDBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E069B8-103D-4C82-92CA-21B62E85DBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E069B8-103D-4C82-92CA-21B62E85DBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E069B8-103D-4C82-92CA-21B62E85DBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E069B8-103D-4C82-92CA-21B62E85DBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

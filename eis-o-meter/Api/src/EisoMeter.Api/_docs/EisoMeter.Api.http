@@ -1,0 +1,22 @@
+@host = http://localhost:5252
+###
+
+POST {{host}}/api/v1/claims/status?email=user5@company.com
+Accept: application/json
+Content-Type: application/json
+
+###
+GET {{host}}/api/v1/claims/status
+Accept: application/json
+Content-Type: application/json
+
+###
+
+
+POST {{host}}/api/v1/claims
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "user@compansy.com"
+}
