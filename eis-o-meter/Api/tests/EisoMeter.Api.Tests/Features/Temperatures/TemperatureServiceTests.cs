@@ -4,13 +4,12 @@ namespace EisoMeter.Api.Tests.Features.Temperatures
     {
         private readonly ITemperatureStatusRepository _repo = Substitute.For<ITemperatureStatusRepository>();
         private readonly IWeatherApiClient _weatherApiClient = Substitute.For<IWeatherApiClient>();
-        private readonly IDateProvider _dateProvider = Substitute.For<IDateProvider>();
 
         private readonly TemperatureService _service;
 
         public TemperatureServiceTests()
         {
-            _service = new TemperatureService(_repo, _weatherApiClient, _dateProvider);
+            _service = new TemperatureService(_repo, _weatherApiClient);
         }
 
         [Fact]

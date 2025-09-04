@@ -5,15 +5,9 @@ internal static class FeatureManager
     private const string ClaimsEndpointTagName = "claims";
     private const string ClaimsEndpointPrefix = $"/api/v1/{ClaimsEndpointTagName}";
     
-    private const string TemperatureEndpointTagName = "temperatures";
-    private const string TemperatureEndpointPrefix = $"/api/v1/{TemperatureEndpointTagName}";
-    
-
-    
     internal static IEndpointRouteBuilder MapFeaturesEndpoints(this IEndpointRouteBuilder endpoint)
     {
         MapClaimsEndpoints(endpoint);
-        // MapStatusEndpoints(endpoint);
 
         return endpoint;
     }
@@ -26,12 +20,4 @@ internal static class FeatureManager
         claimsGroupEndpoint.MapClaimRewardHandlerEndPoint();
         claimsGroupEndpoint.MapGetClaimStatusEndPoint();
     }
-    // private static void MapStatusEndpoints(IEndpointRouteBuilder endpoint)
-    // {
-    //     var statusGroupEndpoint = endpoint.MapGroup(StatusEndpointPrefix)
-    //         .WithTags(StatusEndpointTagName)
-    //         .WithDescription("Provides endpoints related to status management.");
-    //
-    //     statusGroupEndpoint.MapGetStatusEndPoint();
-    // }
 }

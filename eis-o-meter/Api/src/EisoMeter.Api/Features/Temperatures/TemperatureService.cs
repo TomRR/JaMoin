@@ -9,16 +9,13 @@ public class TemperatureService : ITemperatureService
 {
     private readonly ITemperatureStatusRepository _repo;
     private readonly IWeatherApiClient _weatherApiClient;
-    private readonly IDateProvider _dateProvider;
 
     public TemperatureService(
         ITemperatureStatusRepository repo,
-        IWeatherApiClient weatherApiClient,
-        IDateProvider dateProvider)
+        IWeatherApiClient weatherApiClient)
     {
         _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         _weatherApiClient = weatherApiClient ?? throw new ArgumentNullException(nameof(weatherApiClient));
-        _dateProvider = dateProvider ?? throw new ArgumentNullException(nameof(dateProvider));
     }
 
     public async Task<double> GetHighestTemperature(DateOnly date, CancellationToken cancellationToken)
