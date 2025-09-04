@@ -113,8 +113,8 @@ Antwort: Erfolg oder Fehler (z. B. wenn User schon geclaimt hat).
 | Id                 | PK   | AUTOINCREMENT |
 | Date               | TEXT |               |
 | HighestTemperature | REAL |               |
-## Umsetzung (realistisch)
 
+## Umsetzung 
 
 - Planung ~1h
 - Setup: ~1h (Api+UI)
@@ -124,3 +124,28 @@ Antwort: Erfolg oder Fehler (z. B. wenn User schon geclaimt hat).
 - Frontend-Integration: ~2 h
 
 - **Gesamt ~9h**
+
+Am Ende war es wahrscheinlich etwas mehr und ich hab nurnoch 'ExtremeGoHorse' gemacht
+
+## Next Time:
+Ui wo User Email eingeben und submitten kann -> Email in DB speichern
+Cron-API prüft im Intervall die Temperatur
+Wenn Schwellenwert erreicht wird, ClaimCode erstellen und an alle eingetragenen Emails senden
+
+ClaimCodeStatus: Active, Expired
+
+Wenn Code für diesen Tag vorhanden ist -> keine weitere Email schicken
+
+Datenmodell
+Email
+Date
+Code
+CodeStatus
+
+-> andere Page in UI
+POST Endpoint: Code einlösen
+-> setzt CodeStatus von Active auf Expired
+-> wenn bereits Expired, return 409 Conflict (oder alternativ 200 OK mit Hinweis "already expired")
+
+
+
